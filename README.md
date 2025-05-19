@@ -4,13 +4,13 @@ Assignment 6. ESP32 Web Server
 ---
 
 ## Result
-Arduino Screenshot
+### Arduino Screenshot
 ![Arduino](6-1.png)
 ![Arduino](6-2.png)
 
-photo of the deployment
+### photo of the deployment
 ![deployment](6-3.png)
-test/demo
+### test/demo
 (https://youtu.be/H_03G_sPb6s?si=GPcZ28mnbbkFivba)
 ---
 
