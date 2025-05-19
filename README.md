@@ -15,7 +15,7 @@ Assignment 6. ESP32 Web Server
 ---
 
 ## Note
-### An RGB LED with a common anode configuration was used.
+An RGB LED with a common anode configuration was used.
 Instead of fixed resistors, a potentiometer was used to limit the current flowing through the LED.
 Each color pin (Red, Green, Blue) was connected to separate GPIO pins of the ESP32, and the common anode (V) pin was connected to the 3.3V power supply.
 This setup allows the LED to turn on when the corresponding GPIO pin is set to LOW, as current flows from the 3.3V through the LED to the GPIO pin.
