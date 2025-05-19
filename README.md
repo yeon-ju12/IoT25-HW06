@@ -15,7 +15,7 @@ Assignment 6. ESP32 Web Server
 ---
 
 ## Source code
-'''cpp
+```cpp
 #include <WiFi.h>
 
 // Wi-Fi 정보 입력
@@ -25,12 +25,10 @@ const char* password = "12345678";
 WiFiServer server(80);
 String header;
 
-// 상태 변수
 String rState = "off";
 String gState = "off";
 String bState = "off";
 
-// GPIO 핀 설정
 const int redPin = 26;
 const int greenPin = 27;
 const int bluePin = 25;
@@ -41,7 +39,6 @@ const long timeoutTime = 2000;
 
 void setup() {
   Serial.begin(115200);
-
   pinMode(redPin, OUTPUT);
   pinMode(greenPin, OUTPUT);
   pinMode(bluePin, OUTPUT);
@@ -53,6 +50,7 @@ void setup() {
   Serial.print("Connecting to ");
   Serial.println(ssid);
   WiFi.begin(ssid, password);
+
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
@@ -109,7 +107,7 @@ void loop() {
               digitalWrite(bluePin, HIGH);
             }
 
-            // HTML 페이지 생성
+            // HTML 페이지 출력
             client.println("<!DOCTYPE html><html><head>");
             client.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
             client.println("<style>html{font-family:Helvetica;text-align:center;} .button{background-color:#4CAF50;border:none;color:white;padding:16px 40px;font-size:20px;cursor:pointer;margin:5px;} .button2{background-color:#555555;}</style>");
